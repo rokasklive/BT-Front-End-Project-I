@@ -1,41 +1,237 @@
 /* START OF GLOBAL STYLES */
 * {
-    box-sizing: border-box;
-}
-body{
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    margin: 0;
-}
-/* END OF GLOBAL STYLES */
-header{
-    text-align: center;
-    margin-top: 65px;
-}
-a {
-    margin: 0 20px;
-    text-decoration: none;
+    box-sizing:         border-box;
 }
 
-img{
-    display: inline-block;
-    border-radius: 50%;
-    width: 175px;
-    height: 175px;
-    margin: 0 auto;
+body {
+    display: flex;
+    flex-direction: column;
+    font-family:        "Helvetica Neue", Helvetica, sans-serif;
+    margin:             0 auto;
+    width: 1000px;
 }
 @font-face {
-    font-family: 'liberation_sans';
-    src: url('fonts/liberationsans-bold-webfont.eot');
-    src: url('fonts/liberationsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/liberationsans-bold-webfont.woff2') format('woff2'),
-         url('fonts/liberationsans-bold-webfont.woff') format('woff'),
-         url('fonts/liberationsans-bold-webfont.ttf') format('truetype'),
-         url('fonts/liberationsans-bold-webfont.svg#liberation_sansbold') format('svg');
-    font-weight: bold;
-    font-style: normal;
+    font-family:        'liberation_sans';
+    src:                url('fonts/liberationsans-bold-webfont.eot');
+    src:                url('fonts/liberationsans-bold-webfont.eot?#iefix')
+                            format('embedded-opentype'),
+                        url('fonts/liberationsans-bold-webfont.woff2')
+                            format('woff2'),
+                        url('fonts/liberationsans-bold-webfont.woff')
+                            format('woff'),
+                        url('fonts/liberationsans-bold-webfont.ttf')
+                            format('truetype'),
+                        url('fonts/liberationsans-bold-webfont.svg#liberation_sansbold')
+                            format('svg');
+    font-weight:        bold;
+    font-style:         normal;
 }
 
-h1{
-    font-family: 'liberation_sans';
-    font-size: 55zpx;
+header {
+    position: relative;
+    text-align:         center;
+    margin-top:         65px;
+    width: 1000px;
+
+}
+
+a {
+    font-size:          26px;
+    margin:             0 25px;
+    text-decoration:    none;
+    text-align:         center;
+    color:              indigo;
+}
+
+.index_nav > a {
+    display:            inline-block;
+    min-width:          125px;
+    margin:             0;
+}
+
+footer {
+    text-align:         center;
+    color:              lightgrey;
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+img {
+    border-radius:      50%;
+    width:              175px;
+    height:             175px;
+    margin:             1px auto;
+    box-shadow:         4px 4px 6px 0px rgba(0, 0, 0, 0);
+    transition: box-shadow 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out, margin 0.3s ease-out;
+
+}
+
+img:hover{
+    box-shadow:         4px 4px 25px -10px rgba(0, 0, 0, .75);
+    width: 177px;
+    height: 177px;
+    margin: 0 auto;
+
+}
+
+
+h1 {
+
+    font-family:        'liberation_sans';
+    font-size:          52px;
+
+}
+
+
+
+h3 {
+    margin-top:         10px;
+    margin-bottom:      50px;
+    color:              lightgrey;
+    font-weight:        normal;
+    font-size:          24px;
+}
+
+
+.index_nav {
+    padding-top:        10px;
+    margin:             60px 0;
+}
+/* END OF GLOBAL STYLES */
+.divider {
+    overflow:           visible;
+    border:             0;
+    height:             1px;
+    opacity:            .5;
+    background-image:   linear-gradient(to right,
+                        rgba(0, 0, 0, 0),
+                        lightgrey,
+                        rgba(0, 0, 0, 0));
+    text-align:         center;
+    width: 600px;
+}
+
+.divider:after {
+    color:              lightgrey;
+    content:            "○";
+    display:            inline-block;
+    position:           relative;
+    top:                -15px;
+    font-size:           24px;
+    padding:            0 4px;
+    background:         white;
+}
+
+.social_links a {
+    margin:             0 10px;
+}
+
+.fa-reddit-alien, .fa-facebook-f, .fa-twitter, .fa-github-alt, .fa-envelope{
+    color: black;
+	box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0);
+    transition: color 0.2s ease-in-out;
+
+}
+.fa-github-alt:hover{
+    color: indigo;
+
+}
+.fa-envelope:hover{
+    color: grey;
+
+}
+.fa-reddit-alien:hover{
+    color: #ff4500;
+
+}
+
+.fa-twitter:hover{
+    color: #4fafed;
+
+}
+
+.fa-facebook-f:hover{
+    color: #4361b3;
+
+}
+
+footer > p {
+    margin-top:         40px;
+}
+
+footer{
+}
+.blog_entry{
+    color: black;
+    margin: 20px;
+}
+
+.blog_entry:hover{
+    color: indigo;
+}
+.blog_entry:active{
+    color: violet;
+}
+
+
+.blog_entry_title{
+    display: inline-block;
+    font-size: 24px;
+}
+.blog_entry_date{
+    height: 28px;
+    float: right;
+    font-size: 20px;
+    margin-top: 24px;
+    line-height: 28px;
+    color: lightgrey;
+    font-weight:100;
+}
+
+.side_nav > a{
+    font-size: 15px;
+    margin: 7px;
+    display: inline-block;
+}
+
+
+main {
+    width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+section{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.name_surname{
+    text-align: center;
+}
+
+.header_flex{
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+}
+
+
+.header_center{
+    width: 500px;
+    align-self: center;
+}
+.header_left, .header_right{
+    width: 250px;
+    height: 100%;
+    margin-top: 75px;
+}
+
+footer a{
+    font-size: 15px;
+    color: lightgrey;
+    margin: 0 5px;
 }
