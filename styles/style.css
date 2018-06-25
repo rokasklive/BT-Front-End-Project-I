@@ -5,21 +5,21 @@
     box-sizing: inherit;
 }
 
-html {
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    box-sizing: border-box;
-}
-
 @font-face {
     font-family: 'liberation_sans';
     src: url('fonts/liberationsans-bold-webfont.eot');
     src: url('fonts/liberationsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/liberationsans-bold-webfont.woff2') format('woff2'),
-         url('fonts/liberationsans-bold-webfont.woff') format('woff'),
-         url('fonts/liberationsans-bold-webfont.ttf') format('truetype'),
-         url('fonts/liberationsans-bold-webfont.svg#liberation_sansbold') format('svg');
+    url('fonts/liberationsans-bold-webfont.woff2') format('woff2'),
+    url('fonts/liberationsans-bold-webfont.woff') format('woff'),
+    url('fonts/liberationsans-bold-webfont.ttf') format('truetype'),
+    url('fonts/liberationsans-bold-webfont.svg#liberation_sansbold') format('svg');
     font-weight: bold;
     font-style: normal;
+}
+
+html {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 body,
@@ -126,6 +126,13 @@ section {
     border-radius: 50%;
     width: 150px;
     height: 150px;
+    filter: drop-shadow(2px 2px 1px white);
+    transition: filter .1s linear, transform .1s linear;
+}
+
+.profile_foto_circular:hover{
+    filter: drop-shadow(2px 2px 1px black);
+    transform: scale(1.01, 1.01);
 }
 
 .profile_foto_regular {
@@ -134,7 +141,7 @@ section {
 }
 
 .about_text {
-    width: 600px;
+    width: 500px;
 }
 
 .social_icons a {
@@ -316,7 +323,8 @@ section {
 .project_contact_box_contact {
     align-self: center;
 }
-.fa-twitter, .fa-facebook {
+.fa-twitter,
+.fa-facebook {
     padding-top: 3px;
     padding-right: 3px;
 }
